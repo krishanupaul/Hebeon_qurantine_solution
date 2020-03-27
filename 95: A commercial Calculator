@@ -1,0 +1,29 @@
+Develop a program to solve simple computational problems using arithmetic expressions and use of each operator leading to simulation of a commercial calculator. 1.'+' 2.'-' 3.'*' 4.'/' 5.'%'
+
+Sample Inputs	
+
+45
+5
++
+
+Sample Outputs
+
+50
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a,b;
+ char op;
+ scanf("%d %d %c", &a,&b,&op);
+ 
+ switch(op){
+     case '+': printf("%d",a+b);break;
+     case '-': printf("%d",a-b);break;
+     case '*': printf("%d",a*b);break;
+     case '/': printf("%d",(int)(a/b));
+ }
+ return 0;
+ }
