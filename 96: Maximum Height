@@ -1,0 +1,28 @@
+Description:
+
+Develop a program to find the maximum height which it can reach. Hint: Maximum height, h=u2 /2g.
+
+Explanation:
+
+Assume acceleration due to gravity is 9.8m2 /sec. Assume an object is thrown upwards with some initial velocity, u (in m/sec).
+
+Sample Inputs	
+
+20
+
+Sample Outputs
+
+20.41
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a;
+ scanf("%d", &a);
+ printf("%.2f", (a*a)/(2*9.8));
+ return 0;
+ }
+ 
