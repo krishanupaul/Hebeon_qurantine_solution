@@ -1,0 +1,27 @@
+Develop a program that reads two integers x and n and calls a recursive function to compute x^n.
+
+Sample Inputs	
+2 3
+
+Sample Outputs
+8
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ int power(int a, int n){
+     if(n==0)
+         return 1;
+     if(n==1)
+        return a;
+     else
+        return a*power(a,n-1);
+ }
+ int main()
+ {
+ int a,n;
+ scanf("%d %d", &a,&n);
+ printf("%d", power(a,n));
+ return 0;
+ }
+ 
