@@ -1,0 +1,18 @@
+Develop a program to find the square root of a given number N and execute for all possible inputs with appropriate messages. Note: Don’t use library function sqrt(n).
+
+Sample Input	Sample Output
+4	2.00
+
+
+
+
+
+#include <stdio.h>
+ 
+ int main()
+ {
+ int a;
+ scanf("%d", &a);
+ printf("%.2f", sqrt(a));
+ return 0;
+ }
