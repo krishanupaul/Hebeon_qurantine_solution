@@ -1,0 +1,40 @@
+Develop a program to carry out the arithmetic operations addition, subtraction, multiplication, division and modulus using a switch statement.
+
+Sample Inputs	
++
+
+21
+
+21
+
+Sample Outputs
+
+42
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a,b;
+ char op;
+ scanf("%c %d %d",&op,&a,&b);
+ 
+ switch(op){
+     case '+': printf("%d",a+b);break;
+     case '-': printf("%d",a-b);break;
+     case '*': printf("%d",a*b);break;
+     case '/': if(a<b)
+                    printf("Invalid");
+               else    
+                printf("%d",(int)(a/b));
+               break;
+     case '%': if(a<b)
+                    printf("Invalid");
+               else
+                    printf("%d", a%b);
+                break;    
+     default:printf("Invalid");            
+ }
+ return 0;
+ }
