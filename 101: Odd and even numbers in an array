@@ -1,0 +1,44 @@
+Develop a program to find the number of Even and Odd digits in a given number.
+
+Sample Inputs	
+
+6
+34
+3
+6
+0
+435
+8
+
+
+Sample Outputs
+
+Even numbers 34
+Even numbers 6
+Even numbers 0
+Even numbers 8
+Odd numbers 3
+Odd numbers 435
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int arr[100],n;
+ scanf("%d",&n);
+ for(int i=0;i<n;i++){
+    scanf("%d", &arr[i]);
+ }
+ for(int i=0;i<n;i++){
+    if(arr[i]%2==0)
+        printf("Even numbers %d\n", arr[i]);
+ }
+ for(int i=0;i<n;i++){
+     if(arr[i]%2!=0)
+        printf("Odd numbers %d\n",arr[i]);
+ }
+ return 0;
+ }
+ 
