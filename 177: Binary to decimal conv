@@ -1,0 +1,28 @@
+Implement Recursive functions for Binary to Decimal Conversion
+
+Example :
+
+Sample Inputs	
+1010	
+
+Sample Outputs
+10
+
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <math.h>
+ 
+ int main()
+ {
+ int a,ctr=0,sum=0;
+ scanf("%d", &a);
+ while(a!=0){
+     sum=sum+pow(2,ctr++)*(a%10);
+     a=a/10;
+ }
+ printf("%d", sum);
+ return 0;
+ }
+ 
