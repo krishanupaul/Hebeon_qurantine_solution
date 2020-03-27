@@ -1,0 +1,32 @@
+Description:
+
+Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+
+Note:
+The given integer is guaranteed to fit within the range of a 32-bit signed integer.
+You could assume no leading zero bit in the integer? binary representation.
+
+Example:
+Input:5
+Output: 2
+
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+
+Sample Input	Sample Output
+5,1,8,6,10	2,0,7,1,5
+
+//Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include<math.h>
+ 
+ int main()
+ {
+ int a,n;
+ scanf("%d", &a);
+ if((ceil(log2(a))-log2(a))!=0.0)
+    n=ceil(log2(a));
+ else
+    n=log2(a)+1;
+ printf("%d",a^(int)(pow(2,n)-1));
+ return 0;
+ }
