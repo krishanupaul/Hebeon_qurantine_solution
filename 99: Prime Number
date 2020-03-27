@@ -1,0 +1,30 @@
+Develop a program to determine if the given number is a Prime number or not.
+
+Sample Inputs	
+
+67
+
+Sample Outputs
+
+Prime number
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <math.h>
+ int main()
+ {
+ int a,ctr=0;
+ scanf("%d", &a);
+ 
+ for(int i=1;i<=a;i++){
+     if(a%i==0)
+        ctr++;
+ }
+ if(ctr==2)
+  printf("Prime number");
+ else
+    printf("not a Prime number");
+ return 0;
+ }
+ 
