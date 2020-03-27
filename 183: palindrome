@@ -1,0 +1,35 @@
+Develop a program to find the reverse of a positive integer and check for palindrome or not. Display appropriate messages.
+
+Example:
+
+Sample Inputs	
+WOW	
+
+Sample Outputs
+palindrome
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <string.h>
+ 
+ int main()
+ {
+ char string[100];
+ int l,ctr=0,i,y;
+ scanf("%s", string);
+ l=strlen(string);
+     for(i=0,y=l-1;i<l/2,y>=l/2;i++,y--){
+         if(string[i]==string[y]){
+             ctr++;
+         }
+     }
+ if(l%2!=0)
+    ctr--;
+ if(ctr==l/2)
+    printf("palindrome");
+ else
+    printf("not a palindrome");
+ return 0;
+ }
+ 
