@@ -1,0 +1,79 @@
+mplement structures to read, write, compute average- marks and the students scoring above and below the average marks for a class of N students.
+
+Example :
+
+Sample Inputs	
+3
+1
+abc
+2
+25
+25
+2
+xyz
+2
+25
+36
+3
+wxy
+25
+14
+
+Sample Outputs
+Below Average Students
+
+Roll No. Name   Sub1  Sub2  Total  Average
+
+3   wxy    25   14   39   19.50 
+
+Above Average Students
+
+Roll No. Name   Sub1  Sub2  Total  Average
+
+1   abc    25   25   50   25.00 
+2   xyz    25   36   61   30.50 
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ struct student{
+     int roll;
+     char name[5];
+     int sub1,sub2,total;
+     float avg;
+ };
+ int main()
+ {
+     int n,total_avg,i;
+     scanf("%d",&n);
+     struct student s[n];
+     
+     for(i=0;i<n;i++){
+         scanf("%d %s %d %d",&s[i].roll,s[i].name,&s[i].sub1,&s[i].sub2);
+     }
+     for(i=0;i<n;i++){
+         s[i].total=s[i].sub1+s[i].sub2;
+         s[i].avg=(float)(s[i].total)/2;
+         total_avg=total_avg+s[i].avg;
+     }
+     total_avg=total_avg/n;
+     printf("Below Average Students\n");
+     printf("Roll No. Name   Sub1  Sub2  Total  Average\n");
+     for(i=0;i<n;i++){
+         if(s[i].avg<total_avg){
+             printf("%d   %s    %d   %d   %d   %.2f\n",s[i].roll,s[i].name,s[i].sub1,s[i].sub2,s[i].total,s[i].avg); 
+         }
+     }
+     printf("Above Average Students\n");
+     printf("Roll No. Name   Sub1  Sub2  Total  Average\n");
+     for(i=0;i<n;i++){
+         if(s[i].avg>total_avg){
+             printf("%d   %s    %d   %d   %d   %.2f\n",s[i].roll,s[i].name,s[i].sub1,s[i].sub2,s[i].total,s[i].avg); 
+         }
+     }
+     
+ 
+  return 0;
+ }
+ 
