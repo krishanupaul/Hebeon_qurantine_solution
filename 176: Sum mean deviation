@@ -1,0 +1,39 @@
+Develop a program using pointers to compute the sum, mean and standard deviation of all elements stored in an array of n real numbers.
+
+Example :
+
+Sample Inputs	
+5
+8 9 6 5 4	
+
+Sample Outputs
+Sum       :32.000000
+Mean      :6.400000
+Variance  :3.440000
+Deviation :1.854724
+
+ #include <stdio.h>
+ #include <math.h>
+ 
+ int main()
+ {
+ float sum=0,mean,variance=0,deviation;     
+ int arr[100], n;
+ scanf("%d",&n);
+ for(int i=0;i<n;i++){
+     scanf("%d",&arr[i]);
+     sum=sum+arr[i];
+ }
+ mean=sum/n;
+ for(int i=0;i<n;i++){
+     variance=variance + pow(arr[i]-mean,2);
+ }
+ variance=variance/n;
+ deviation=sqrt(variance);
+ printf("Sum       :%f",sum);
+ printf("\nMean      :%f",mean);
+ printf("\nVariance  :%f",variance); 
+ printf("\nDeviation :%f",deviation);
+ return 0;
+ }
+ 
