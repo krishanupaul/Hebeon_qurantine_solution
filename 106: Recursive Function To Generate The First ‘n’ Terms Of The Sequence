@@ -1,0 +1,29 @@
+Develop a program that calls a recursive function to generate the first terms of the sequence.
+
+Sample Inputs	
+15	
+
+Sample Outputs
+0 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ int fibo(int n){
+     if(n==0)
+         return 0;
+     if(n==1)
+         return 1;
+     else
+         return fibo(n-1)+fibo(n-2);
+ }
+ int main()
+ {
+ int a;
+ scanf("%d", &a);
+ for(int i=0;i<a;i++){
+    printf(" %d ",fibo(i));     
+ }
+ return 0;
+ }
+ 
