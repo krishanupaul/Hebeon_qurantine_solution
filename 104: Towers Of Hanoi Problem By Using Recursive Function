@@ -1,0 +1,32 @@
+Develop a program that uses a recursive function to solve the Towers of Hanoi problem.
+
+Sample Inputs	
+1	
+
+Sample Outputs
+Move disk 1 from A to C
+
+
+
+ //Please accept the inputs from the console and print the output
+#include <stdio.h>
+void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod) 
+{ 
+    if (n == 1) 
+    { 
+        printf("Move disk 1 from %c to %c ", from_rod, to_rod); 
+        return; 
+    } 
+    towerOfHanoi(n-1, from_rod, aux_rod, to_rod); 
+    printf("Move disk %d from %c to %c ", n, from_rod, to_rod); 
+    towerOfHanoi(n-1, aux_rod, to_rod, from_rod); 
+} 
+  
+int main() 
+{ 
+    int n;
+    scanf("%d",&n);
+    towerOfHanoi(n, 'A', 'C', 'B');  // A, B and C are names of rods 
+    return 0; 
+}
+ 
