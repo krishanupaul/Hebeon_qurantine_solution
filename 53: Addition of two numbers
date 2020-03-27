@@ -1,0 +1,20 @@
+C-Program for Addition of two numbers.
+
+Sample Input	
+2
+2	
+Sample Output 
+4
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a,b;
+ scanf("%d%d", &a,&b);
+ printf("%d", a+b);
+ return 0;
+ }
+ 
