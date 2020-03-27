@@ -1,0 +1,35 @@
+Description:
+
+Write functions to implement string operations such as compare, concatenate, string length. Convince the parameter passing techniques.
+
+Sample Inputs	Sample Outputs
+abhi
+shek	
+First string length is :4
+Second-string length is: 4
+STRINGS ARE NOT EQUAL
+The concatenated String is :Abhishek
+
+
+
+
+
+
+//Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <string.h> 
+ int main()
+ {
+    char str1[100],str2[100];
+ scanf("%s %s", str1,str2);
+ printf("First string length is :%d\nSecond string length is: %d\n",strlen(str1),strlen(str2));
+ if(strcmp(str1,str2)==0){
+     printf("STRINGS ARE EQUAL\n");
+ }
+ else{
+     printf("STRINGS ARE NOT EQUAL\n");
+ }
+ printf("The concatenated String is :%s%s\n",str1,str2);
+ return 0;
+ }
+ 
