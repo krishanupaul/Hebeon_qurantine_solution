@@ -11,19 +11,26 @@ Sample Outputs
 
  //Please accept the inputs from the console and print the output
  #include <stdio.h>
+ #include <math.h>
 
- void pascal(int n){
-     if(n==1)
+ int pascal(int n){
+     if(n==0)
          return 1;
      else
-         printf("%d",pow(11,pascal(n-1)));
+         return 11*pascal(n-1);
  }
  
  int main()
  {
- int a;
- scanf("%d", &a);
- pascal(a);
+ int a,n;
+ scanf("%d",&a);
+ for(int i=0;i<a;i++){
+     n=pascal(i);
+     while(n!=0){
+         printf("%d ",n%10);
+         n=n/10;
+     }
+     printf("\n");
+ }
  return 0;
  }
- 
