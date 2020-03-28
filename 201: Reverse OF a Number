@@ -1,0 +1,18 @@
+Take any Integer Input and print the reverse of a number (Note: Use While Loop)
+
+Example:
+
+Sample Inputs
+321	
+
+Sample Outputs
+123
+
+a = int(input())
+sum=0
+while a!=0:
+    sum=sum+int(a%10)
+    a=int(a/10)
+    if a!=0:
+        sum=sum*10
+print(sum) 
