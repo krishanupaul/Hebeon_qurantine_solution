@@ -1,0 +1,86 @@
+Develop a program to introduce 2D Array manipulation and implement Matrix multiplication and ensure the rules of multiplication are checked.
+
+Explanation:
+
+Sample Inputs	
+2
+2
+2
+1
+0
+0
+1
+1
+0
+0
+1	
+
+Sample Outputs
+2
+1
+0
+0
+1
+
+
+ //Please accept the inputs from the console and print the output
+#include <stdio.h>
+void enterData(int first[][10], int second[][10], int r1, int c1, int r2, int c2);
+void multiplyMatrices(int first[][10], int second[][10], int multResult[][10], int r1, int c1, int r2, int c2);
+void display(int mult[][10], int r1, int c2);
+
+int main() {
+    int first[10][10], second[10][10], mult[10][10], r1, c1, r2, c2;
+    scanf("%d%d", &r1, &c1);
+    scanf("%d%d", &r2, &c2);
+    if(c1 != r2) {
+      return 0;  
+    }
+
+    enterData(first, second, r1, c1, r2, c2);
+    multiplyMatrices(first, second, mult, r1, c1, r2, c2);
+    display(mult, r1, c2);
+
+    return 0;
+}
+
+void enterData(int first[][10], int second[][10], int r1, int c1, int r2, int c2) {
+
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c1; ++j) {
+            scanf("%d", &first[i][j]);
+        }
+    }
+
+    for (int i = 0; i < r2; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            scanf("%d", &second[i][j]);
+        }
+    }
+}
+
+void multiplyMatrices(int first[][10], int second[][10], int mult[][10], int r1, int c1, int r2, int c2) {
+
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            mult[i][j] = 0;
+        }
+    }
+    
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            for (int k = 0; k < c1; ++k) {
+                mult[i][j] += first[i][k] * second[k][j];
+            }
+        }
+    }
+}
+
+void display(int mult[][10], int r1, int c2) {
+
+    for (int i = 0; i < r1; ++i) {
+        for (int j = 0; j < c2; ++j) {
+            printf("%d\n", mult[i][j]);
+        }
+    }
+}
