@@ -1,0 +1,14 @@
+Take two integer inputs and print the sum.
+
+Sample Test cases
+
+Sample Input	
+2
+
+Sample Output
+2	4
+
+#Please accept the inputs from the console and print the output
+a = int(input());
+b = int(input());
+print(a+b);
