@@ -1,0 +1,26 @@
+Develop a program to find the square root of a given number N and execute for all possible inputs with appropriate messages. Note: Don’t use library function sqrt(n).
+
+Example :
+
+Sample Inputs	
+4	
+
+Sample Outputs
+2.000000
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ int main()
+ {
+ int a;
+ float n=0,sqrt;
+ scanf("%d", &a);
+ sqrt=a/2;
+ while(sqrt!=n){
+     n=sqrt;
+     sqrt=(a/n+n)/2;
+ }
+ printf("%f",sqrt);
+ return 0;
+ }
