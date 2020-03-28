@@ -1,0 +1,12 @@
+Take any Character Input and print the ASCII Value of a Character
+
+Example:
+
+Sample Input	
+2	
+
+Sample Output
+50
+
+a = input()
+print(ord(a))
