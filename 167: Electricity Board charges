@@ -1,0 +1,42 @@
+An electricity board charges the following rates for the use of electricity: for the first 200 units 80 paise per unit: for the next 100 units 90 paise per unit: beyond 300 units Rs 1 per unit. All users are charged a minimum of Rs. 100 as meter charge. If the total amount is more than Rs 400, then an additional surcharge of 15% of total amount is charged. Write a program to read the name of the user, number of units consumed and print out the charges.
+
+Sample Inputs	
+555
+Jack
+100	
+
+Sample Outputs
+Electricity Bill:
+Customer IDNO : 555
+Customer Name : Jack
+unit Consumed : 100
+Amount Charges @Rs. 0.80 per unit : 80.00
+Surchage Amount : 0.00
+Minimum meter charge Rs : 100
+Net Amount Paid By the Customer : 180.00
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a,n;
+ char s[10];
+ scanf("%d%s%d", &a,s,&n);
+ 
+ 
+ 
+// printf("Electricity Bill: \nCustomer IDNO : %d \nCustomer Name : %nunit Consumed : %d \nAmount Charges @Rs. 0.80 per unit : 80.00 \nSurchage Amount : 0.00 \nMinimum meter charge Rs : 100 \nNet Amount Paid By the Customer : %.2f",a,s,n,0.80*n+100.00);
+
+ printf("Electricity Bill:");
+ printf("\nCustomer IDNO : %d",a);
+ printf("\nCustomer Name : %s",s);
+ printf("\nunit Consumed : %d",n);
+ printf("\nAmount Charges @Rs. 0.80 per unit : 80.00");
+ printf("\nSurchage Amount : 0.00");
+ printf("\nMinimum meter charge Rs : 100");
+ printf("\nNet Amount Paid By the Customer : %.2f",0.80*n+100.00);
+ return 0;
+ }
+ 
