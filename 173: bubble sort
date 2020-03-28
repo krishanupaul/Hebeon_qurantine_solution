@@ -1,0 +1,36 @@
+Develop a program to sort the given set of N numbers using Bubble sort.
+
+Example:
+
+Sample Inputs	
+5
+
+Sample Outputs
+1 2 3 4 5	
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int arr[100], temp,n;
+ scanf("%d",&n);
+ for(int i=0;i<n;i++){
+     scanf("%d",&arr[i]);
+ }
+ for(int i=0;i<n;i++){
+     for(int j=1;j<n;j++){
+         if(arr[j]<arr[j-1]){
+             temp=arr[j];
+             arr[j]=arr[j-1];
+             arr[j-1]=temp;
+         }
+     }
+ }
+ for(int i=0;i<n;i++){
+     printf("%d ",arr[i]);
+ }
+ return 0;
+ }
+ 
