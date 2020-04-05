@@ -1,0 +1,76 @@
+perform the following array operation using c++
+
+Insert
+Delete
+Display
+Quit
+
+Example:
+
+Sample Inputs
+1
+22
+1
+54
+1
+85
+3
+4	
+
+Sample Outputs
+Queue elements: 22 54 85
+
+
+  //Please accept the inputs from the console and print the output
+  #include<iostream>
+  using namespace std;
+  
+  #define max_size 10
+  int queue[max_size];
+  int front=-1;
+  int rear = -1;
+  
+  void insert(){
+      if(rear==max_size-1||front>rear){
+          ;
+      }
+      else{
+          if(front==-1){ front++;}
+          rear++;
+          int data;
+          cin>>data;
+          queue[rear]=data;
+      }
+  }
+  
+  void deleteq(){
+      if(front>=rear||front==-1){
+          ;
+      }
+      else{
+          front++;
+      }
+  }
+   
+  void display(){
+      cout<<"Queue elements: ";
+      for (int i=front;i<=rear;i++){
+          cout<<queue[i]<<" ";
+      }
+  }
+  
+  int main()
+  {
+      int a;
+      while(1){
+      cin>>a;
+          switch(a){
+              case 1: insert();break;
+              case 2: deleteq();break;
+              case 3: display();break;
+              case 4: return 0;
+          }
+      }  
+          
+  }
+  
