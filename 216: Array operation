@@ -1,0 +1,31 @@
+Enter an Array of 5 elements and print the sum of Array
+Note: Use for Loop to perform this operation
+
+Explanation:
+Sample Outputs
+21
+22
+23
+24
+25	
+
+
+Sample Inputs
+Sum = 115
+
+
+  //Please accept the inputs from the console and print the output
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[5] , sum=0;
+    
+    for(int i=0;i<5;i++){
+        cin>>arr[i];
+        sum= sum+arr[i];
+    }
+    
+    cout<<"Sum = "<<sum;
+    
+}
