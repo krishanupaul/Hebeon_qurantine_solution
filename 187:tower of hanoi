@@ -1,0 +1,39 @@
+Explanation:
+Rules of Tower of Hanoi:
+
+i) Only one disc can be moved at a time.
+ii) Only the top disc on any peg can be moved to any other peg.
+iii) A larger disc can’t be placed on a smaller peg.
+
+Sample Inputs	
+1	
+
+Sample Outputs
+Move disk 1 from rod A to rod C
+
+
+  //Please accept the inputs from the console and print the output
+  #include<iostream>
+  #include <stdio.h>
+  using namespace std;
+ 
+void towerOfHanoi(int n, char from_rod, char to_rod, char aux_rod) 
+{ 
+    if (n == 1) 
+    { 
+        cout<<"Move disk 1 from rod "<<from_rod<<" to rod "<<to_rod<<endl; 
+        return; 
+    } 
+    towerOfHanoi(n-1, from_rod, aux_rod, to_rod); 
+    cout<<"Move disk "<<n<<" from rod "<<from_rod<<" to rod "<<to_rod<<endl; 
+    towerOfHanoi(n-1, aux_rod, to_rod, from_rod); 
+} 
+
+int main() 
+{ 
+    int n;
+    cin>>n;
+    towerOfHanoi(n, 'A', 'C', 'B'); 
+    return 0; 
+}
+  
