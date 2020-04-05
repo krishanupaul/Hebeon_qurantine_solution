@@ -1,0 +1,34 @@
+C++ program to find number of binary search trees with n nodes.
+
+Explanation:
+
+Sample Inputs
+4	
+
+Sample Outputs
+14 binary search trees are there for 4 nodes
+
+
+  //Please accept the inputs from the console and print the output
+  #include<iostream>
+  using namespace std;
+  
+  int fact(int n){
+      if(n==0 || n==1){
+          return 1;
+      }
+      else{
+          return n*fact(n-1);
+      }
+  }
+  int main()
+  {
+      int n;
+
+      cin>>n;
+      cout<<fact(2*n)/ (fact(n + 1)*fact(n));
+      cout<<" binary search trees are there for "<<n<<" nodes";
+
+      return 0;
+  }
+  
