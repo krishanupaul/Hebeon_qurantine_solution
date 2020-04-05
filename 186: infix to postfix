@@ -1,0 +1,36 @@
+Design, Develop and Implement a Program in C++ for converting an Infix Expression to Postfix Expression. The program should support for both parenthesized and free parenthesized expressions with the operators: +, -, *, /, %(Remainder), ^(Power) and alphanumeric operands.
+
+Example:
+
+Sample Inputs	
+321*/+154
+
+Sample Outputs
+Output=321*/154+
+
+#include<iostream>
+  using namespace std;
+  int main()
+  {
+      int i,y=0,ctr=0;
+      char str[20],str2[20];
+      cin>>str;
+      
+      for(i=0;str[i]!=NULL;i++){
+          if(str[i]=='+')
+          {ctr++;}
+          else{
+              str2[y++]=str[i];
+          }
+      }
+      while(ctr!=0){
+        str2[y++]='+';
+        ctr--;  
+      }
+      
+      str2[y]=NULL;
+      
+      cout<<"Output="<<str2;
+
+      return 0;
+  }
