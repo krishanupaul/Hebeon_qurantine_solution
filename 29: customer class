@@ -1,0 +1,33 @@
+Write a program to store their name and date_of_birth. The date_of_birth format should be dd/mm/yyyy. Write methods to read customer data as <name, dd/mm/yyyy> and display as <name, dd, mm, yyyy> using StringTokenizer class considering the delimiter character as “/”.
+
+Sample Inputs	
+Pusarla Venkata Sindhu
+5/July/1995	
+
+Sample Outputs
+Pusarla Venkata Sindhu,5,July,1995
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+    char name[100];
+    char dob[20];
+    
+    gets(name);
+    gets(dob);
+    
+    printf("%s,",name);
+    for(int i=0;dob[i]!=NULL;i++){
+        if(dob[i]=='/'){
+            printf(",");
+        }
+        else
+            printf("%c",dob[i]);
+    }
+    printf(",");
+ return 0;
+ }
+ 
