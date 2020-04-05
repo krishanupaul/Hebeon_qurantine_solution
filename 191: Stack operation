@@ -1,0 +1,71 @@
+Design, Develop and Implement a Program in C++ for the following operations on STACK
+
+Push an Element on to Stack
+Pop an Element from Stack
+Display an Element from Stack
+Exit from Stack
+
+Sample Inputs	
+1
+21
+1
+22
+3	
+
+Sample Outputs
+22 21 
+4 
+
+
+  //Please accept the inputs from the console and print the output
+ 
+  #include<iostream>
+  using namespace std;
+  
+  #define max_size 10
+  int stack[max_size];
+  int top=-1;
+  
+  void insert(){
+      if(top==max_size-1){
+          ;
+      }
+      else{
+          
+          top++;
+          int data;
+          cin>>data;
+          stack[top]=data;
+      }
+  }
+  
+  void deleteq(){
+      if(top==-1){
+          ;
+      }
+      else{
+          top--;
+      }
+  }
+   
+  void display(){
+      cout<<"Stack elements are:";
+      for (int i=top;i>=0;i--){
+          cout<<stack[i]<<" ";
+      }
+  }
+  
+  int main()
+  {
+      int a;
+      while(1){
+      cin>>a;
+          switch(a){
+              case 1: insert();break;
+              case 2: deleteq();break;
+              case 3: display();break;
+              case 4: return 0;
+          }
+      }  
+          
+  }
