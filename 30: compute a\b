@@ -1,0 +1,31 @@
+Write a program to read two integers a and b. If b is not equal to '0', compute and print the value of "a/b" else, if b is equal to '0', raise an exception and print "ERROR..!!".
+
+Sample Inputs	
+7
+-28	 
+
+Sample Outputs
+-0.25
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include<math.h>
+ 
+ int main()
+ {
+ float a,b;
+ scanf("%f%f", &a,&b);
+ if(b==0){
+     printf("ERROR..!!");
+     return 0;
+ }
+ if(a<0){
+     
+     printf("%.1f", a/b);
+     return 0;
+ }
+ printf("%.1f",a/b);
+ return 0;
+ }
+ 
