@@ -1,0 +1,58 @@
+Shell sort is a generalization of insertion sort in which the exchange of far element is possible unlike insertion sort with the help of an element ‘gap’ and make the list gap-sorted we will keep decreasing gap until gap becomes 1 which means the last step will be a normal insertion sort.
+
+Example:
+
+Sample Inputs
+5
+698
+541
+236
+874
+896	
+
+Sample Outputs
+Array after sorting is :236 541 698 874 896
+
+
+  
+#include  <iostream> 
+using namespace std; 
+
+int shellSort(int arr[], int n) 
+{ 
+    for (int gap = n/2; gap > 0; gap /= 2) 
+    { 
+        for (int i = gap; i < n; i += 1) 
+        { 
+            int temp = arr[i]; 
+  
+            int j;             
+            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap) 
+                arr[j] = arr[j - gap]; 
+              
+            arr[j] = temp; 
+        } 
+    } 
+    return 0; 
+} 
+  
+void printArray(int arr[], int n) 
+{ 
+    for (int i=0; i<n; i++) 
+        cout << arr[i] << " "; 
+} 
+  
+int main() 
+{ 
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+  
+    shellSort(arr, n); 
+    printArray(arr, n); 
+  
+    return 0; 
+} 
