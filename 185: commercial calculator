@@ -1,0 +1,42 @@
+Description:
+
+Calculate the Sum,Difference,Product,Division,GCD, LCM.
+
+Example:
+
+Sample Inputs	
+2	2
+
+Sample Outputs
+Difference is -2
+
+
+  //Please accept the inputs from the console and print the output
+  #include<iostream>
+  using namespace std;
+  int gcd(int a,int b){
+      if(b%a==0)
+          return a;
+      else
+          return gcd(b%a,a);
+  }
+  int lcm(int a,int b){
+      return a*b/gcd(a,b);
+  }
+  int main()
+  {
+      int a;
+      cin>>a;
+      cout<<a<<endl;
+      switch(a){
+          case 1: cout<<"<Sum is "<<5+7;break;
+          case 2: cout<<"Difference is "<<5-7;break;
+          case 3: cout<<"Product is "<<5*7;break;
+          case 4: cout<<"Division is "<<5/7;break;
+          case 5: cout<<"GCD is "<<gcd(5,7);break;
+          case 6: cout<<"LCM is "<<lcm(5,7);break;
+      }
+
+      return 0;
+  }
+  
