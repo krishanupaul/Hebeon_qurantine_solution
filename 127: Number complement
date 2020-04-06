@@ -1,0 +1,39 @@
+Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+
+Note: The given integer is guaranteed to fit within the range of a 32-bit signed integer. You could assume no leading zero bit in the integer? binary representation.
+
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+
+Sample Inputs	
+143	
+
+Sample Outputs
+112 
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <math.h>
+ 
+ int main()
+ {
+ int barr[50],a,ctr=0,i=0,sum=0,y=0;
+ scanf("%d", &a);
+ while(a!=0){
+     barr[i++]=a%2;
+     a=a/2;
+     ctr++;
+ }
+ for(i=0;i<ctr;i++){
+     if(barr[i]==0)
+        barr[i]=1;
+     else
+        barr[i]=0;
+ }
+ for(i=0;i<ctr;i++){
+     sum=sum+barr[i]*pow(2,y);
+     y++;
+ }
+ printf("%d",sum);
+ return 0;
+ } 
