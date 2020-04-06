@@ -1,0 +1,29 @@
+Develop a program that reads five students marks in a test and then prints the average mark of passed students (Assume that a minimum of 35 is needed to pass) using operators. 
+
+Sample Inputs	
+68
+45
+90
+42
+89	
+
+Sample Outputs
+66.80
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int arr[5];
+ float sum=0.0;
+ 
+ for(int i=0;i<5;i++){
+     scanf("%d",&ar[i])
+     sum=sum+arr[i]
+ }
+ printf("%.2f", sum/5);
+ return 0;
+ }
+ 
