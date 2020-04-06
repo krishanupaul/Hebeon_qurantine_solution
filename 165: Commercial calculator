@@ -1,0 +1,31 @@
+Choice:1 - Add, Choice:2 - Subtract, Choice:3 - Multiplication, Choice:4 - Divide, Choice:5 - Modulus.
+
+
+Example:
+
+Sample Inputs	
+
+10 20
+1 (Choice to Operate)
+
+Sample Outputs
+Sum of 10 and 20 is 30
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+
+ int main()
+ {
+ int a,b, op;
+ scanf("%d %d\n%d", &a,&b,&op);
+
+ switch(op){
+     case 1: printf("Sum of %d and %d is %d",a,b,a+b);break;
+     case 2: printf("Difference of %d and %d is %d",a,b,a-b);break;
+     case 3: printf("Multiplication of %d and %d is %d",a,b,a*b);break;
+     case 4: printf("Division of Two Numbers is %d",(int)(a/b));break;
+     case 5: printf("%d", a%b);
+ }
+ return 0;
+ }
