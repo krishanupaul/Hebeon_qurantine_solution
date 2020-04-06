@@ -1,0 +1,66 @@
+We have to create a Program that uses Binary search algorithm to predict that the element is present or not in the array. The user has to input a sorted array because binary search works on the sorted array.
+
+Example:
+
+Sample Inputs	
+5
+21
+32
+65
+54
+84
+1	
+
+Sample Outputs
+21
+32 
+54 
+65 
+84 
+SEARCH FAILED
+
+
+#include <stdio.h>
+int main()
+{
+  int c, first, last, middle, n, search, array[100],temp;
+  scanf("%d", &n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+  scanf("%d", &search);
+  
+  for(int i=0;i<n-1;i++){
+         for(int j=i+1;j<n;j++){
+             if(array[i]>array[j]){
+                 temp=array[j];
+                 array[j]=array[i];
+                 array[i]=temp;
+             }
+         }
+     }
+  for(c = 0;c < n; c++)
+    printf("%d ",array[c]);
+    
+  first = 0;
+  last = n - 1;
+  middle = (first+last)/2;
+
+  while (first <= last) {
+    if (array[middle] < search)
+      first = middle + 1;
+    else if (array[middle] == search) {
+      printf("\nSEARCH SUCCESSFUL");
+      break;
+    }
+    else
+      last = middle - 1;
+
+    middle = (first + last)/2;
+  }
+  if (first > last)
+    printf("\nSEARCH FAILED");
+
+  return 0;
+
+} 
