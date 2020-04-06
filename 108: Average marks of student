@@ -20,8 +20,8 @@ Sample Outputs
  float sum=0.0;
  
  for(int i=0;i<5;i++){
-     scanf("%d",&ar[i])
-     sum=sum+arr[i]
+     scanf("%d",&ar[i]);
+     sum=sum+arr[i];
  }
  printf("%.2f", sum/5);
  return 0;
