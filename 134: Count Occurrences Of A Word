@@ -1,0 +1,37 @@
+Write a C program to count occurrences of a word in a given string using a loop. How to count total occurrences of a given word in a string using loop in C programming. Logic to count occurrences of a word in a given string.
+
+Sample Inputs	
+The gandhi jayanthi is celeberated on october 2 is the day
+the	
+
+Sample Outputs
+1
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include<stdlib.h>
+ #include<string.h>
+ int main()
+ {
+    char str[100],str2[10];
+    fgets(str, sizeof(str), stdin);
+    fgets(str2, sizeof(str2), stdin);
+    int i,j,y=0,ctr=0,tctr=0;
+    for(i=0;str[i]!=NULL;i=j+1){
+        for(j=i;str[j]!=' ';j++){
+            if(str[j]==str2[y++])
+                ctr++;
+            else
+                break;
+        }
+        y=0;
+        if(ctr==strlen(str2))
+            tctr++;
+    
+        ctr=0;
+    }
+    printf("%d",tctr);
+    return 0;
+ }
+ 
