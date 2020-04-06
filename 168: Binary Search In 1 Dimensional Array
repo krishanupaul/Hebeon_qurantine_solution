@@ -1,0 +1,43 @@
+Introduce 1D Array manipulation and implement Binary search.
+
+Example:
+
+Sample Inputs	
+4
+apple
+ball
+orange
+banana
+ball	
+
+Sample Outputs
+Name found at position:2
+ 
+ 
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include <string.h>
+ 
+ struct stringarr{
+     char str[10];
+ };
+ int main()
+ {  
+     int n,i;
+     char key[10];
+     scanf("%d",&n);
+     struct stringarr s[n];
+     for(i=0;i<n;i++){
+         scanf("%s",s[i].str);
+     }
+     scanf("%s",key);
+     for(i=0;i<n;i++){
+         if(!strcmp(key,s[i].str)){
+             printf("Name found at position:%d",i+1);
+             return 0;
+         }
+     }
+     printf("Name not found");
+ return 0;
+ }
+ 
