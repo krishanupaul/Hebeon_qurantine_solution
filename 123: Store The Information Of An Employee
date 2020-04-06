@@ -1,0 +1,44 @@
+Declare a structure to store the following information of an employee: Employee code, Employee name, Salary, Department number, Date of joining (it is itself a structure consisting of day, month and year). Write a program to store the data of N employees where N is given by the user (Use dynamic memory allocation).
+
+Sample Inputs	
+446
+hebeon
+35000
+11
+7
+8
+
+Sample Outputs
+2010	Employee code : 446
+Employee name: hebeon
+Salary: 35000.0
+Department number: 11
+Date of joining : 7-8-2010
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ struct emp{
+     int id;
+     char name[20];
+     float salary;
+     int dep;
+     int dd,mm,yyyy;
+ };
+ int main()
+ {
+    struct emp e;
+    scanf("%d",&e.id);
+    scanf("%s",e.name);
+    scanf("%f",&e.salary);
+    scanf("%d",&e.dep);
+    scanf("%d\n%d\n%d",&e.dd,&e.mm,&e.yyyy);
+    
+    printf("Employee code: %d\n",e.id);
+    printf("Employee name: %s\n",e.name);
+    printf("Salary: %.1f\n",e.salary);
+    printf("Department number: %d\n",e.dep);
+    printf("Date of joining: %d-%d-%d",e.dd,e.mm,e.yyyy);
+    return 0;
+ }
+ 
