@@ -1,0 +1,26 @@
+Develop a program Using pointers, write a function that receives a character string and a character as argument and deletes all occurrences of this character in the string. The function should return the corrected string with no spaces.
+
+Sample Inputs	
+good
+o	
+
+Sample Outputs
+gd
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     char str[50],a;
+     scanf("%s",str);
+     scanf("\n%c",&a);
+     for(int i=0;str[i]!=NULL;i++){
+         if(a==str[i]){;}
+         else
+            printf("%c",str[i]);
+     }
+     return 0;
+ }
+ 
