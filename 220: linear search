@@ -1,0 +1,47 @@
+We have to write a program that finds the position of an element in an array using Linear Search Algorithm. We have to take an array and a value to be searched in the array as input from the user, and then find the position of that element in the array by using linear search algorithm.
+
+Example:
+
+Sample Inputs	
+5
+32
+54
+15
+35
+25
+35	
+
+Sample Outputs
+4
+
+
+#include<stdio.h>
+int main()
+{
+	int i, num, n, c=0, pos;
+	scanf("%d",&n);
+	int arr[n]; 
+	for(i=0; i<n; i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	scanf("%d",&num);
+	for(i=0; i<n; i++)
+	{
+		if(arr[i]==num)
+		{
+			c=1;
+			pos=i+1;
+			break;
+		}
+	}
+	if(c==0)
+	{
+		printf("Element is not present in the array");
+	}
+	else
+	{
+		printf("%d",pos);
+	}
+	return 0;
+}
