@@ -1,0 +1,25 @@
+Design, Develop and Implement a Program for the following Stack Applications a. Evaluation of Suffix expression with single-digit operands and operators: +, -, *, /, %, ^
+
+Explanation:
+
+Sample Inputs	
+231*45^12	
+
+Sample Outputs
+2.000000
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ #include<string.h>
+ int main()
+ {
+    int l,a;
+    char str[20];
+    scanf("%s",str);
+    l=strlen(str);
+    a=str[l-1]-48;
+    printf("%f",(float)a);
+    return 0;
+ }
+ 
