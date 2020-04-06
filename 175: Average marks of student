@@ -34,6 +34,7 @@ Roll No. Name   Sub1  Sub2  Total  Average
 2   xyz    25   36   61   30.50 
 
 
+ 
  //Please accept the inputs from the console and print the output
  #include <stdio.h>
  
@@ -45,8 +46,13 @@ Roll No. Name   Sub1  Sub2  Total  Average
  };
  int main()
  {
-     int n,total_avg,i;
+     int n;
+     float total_avg;
+     int i;
      scanf("%d",&n);
+     if(n==0){
+         return 0;
+     }
      struct student s[n];
      
      for(i=0;i<n;i++){
@@ -58,22 +64,19 @@ Roll No. Name   Sub1  Sub2  Total  Average
          total_avg=total_avg+s[i].avg;
      }
      total_avg=total_avg/n;
-     printf("Below Average Students\n");
-     printf("Roll No. Name   Sub1  Sub2  Total  Average\n");
      for(i=0;i<n;i++){
          if(s[i].avg<total_avg){
-             printf("%d   %s    %d   %d   %d   %.2f\n",s[i].roll,s[i].name,s[i].sub1,s[i].sub2,s[i].total,s[i].avg); 
+             printf("%d\n",s[i].roll); 
          }
      }
-     printf("Above Average Students\n");
-     printf("Roll No. Name   Sub1  Sub2  Total  Average\n");
      for(i=0;i<n;i++){
-         if(s[i].avg>total_avg){
-             printf("%d   %s    %d   %d   %d   %.2f\n",s[i].roll,s[i].name,s[i].sub1,s[i].sub2,s[i].total,s[i].avg); 
+         if(s[i].avg>=total_avg){
+             printf("%d ",s[i].roll); 
          }
      }
      
  
   return 0;
  }
+ 
  
