@@ -1,0 +1,27 @@
+Develop a program on a function to find the factorial of a positive integer 
+
+Sample Inputs	
+4	
+
+Sample Outputs
+24
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int fact(int n){
+     if(n==0||n==1)
+        return 1;
+     else 
+     return n*fact(n-1);
+ }
+ 
+ int main()
+ {
+ int a;
+ scanf("%d", &a);
+ printf("%d", fact(a));
+ return 0;
+ }
+ 
