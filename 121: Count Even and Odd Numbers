@@ -1,0 +1,30 @@
+Write a C program to find the number of even and odd digits in a given number
+
+Example:
+
+Sample Inputs	
+123456	
+
+Sample Outputs
+Odd: 3 Even: 3
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a,odd=0,even=0;
+ scanf("%d", &a);
+ while(a!=0){
+     if((a%10)%2==0)
+        even++;
+     else
+        odd++;
+     a=a/10;    
+ }
+ 
+ printf("Odd: %d Even: %d", odd,even);
+ return 0;
+ }
+ 
