@@ -1,0 +1,36 @@
+ Description: Write a menu-based program in C that uses a set of functions to perform the following Operations:
+ i) Addition of two complex numbers         
+ ii) Subtraction of two complex numbers  
+ iii) Multiplication of two complex numbers   
+ iv) Division of two complex numbers   
+ v) Exit Represent the complex number using a structure. Example:
+ Input               
+ Output ------------------------------------------- 3 2 3 4 5 
+ Multiplication of two complex numbers = -7 + 22i
+ 
+//Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ struct emp{
+     int id;
+     char name[20];
+     float salary;
+     int dep;
+     int dd,mm,yyyy;
+ };
+ int main()
+ {
+    struct emp e;
+    scanf("%d",&e.id);
+    scanf("%s",e.name);
+    scanf("%f",&e.salary);
+    scanf("%d",&e.dep);
+    scanf("%d\n%d\n%d",&e.dd,&e.mm,&e.yyyy);
+    
+    printf("Employee code : %d\n",e.id);
+    printf("Employee name: %s\n",e.name);
+    printf("Salary: %.1f\n",e.salary);
+    printf("Department number: %d\n",e.dep);
+    printf("Date of joining : %d-%d-%d",e.dd,e.mm,e.yyyy);
+    return 0;
+ }
+ 
