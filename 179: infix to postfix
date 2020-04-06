@@ -1,0 +1,36 @@
+Design, Develop and Implement a Program for converting an Infix Expression to Postfix Expression. The program should support for both parenthesized and free parenthesized expressions with the operators: +, -, *, /, %(Remainder), #, ^(Power) and alphanumeric operands.
+
+Explanation:
+
+Sample Inputs	
+
+ABDC^^^H12	
+
+Sample Outputs
+ABDC^12
+ABD12^^
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     int ctr=0,y=0;
+     char str[20], str2[20],c;
+     scanf("%s", str);
+     for(int i=0;str[i]!=NULL;i++){
+         if((str[i]=='^' || str[i]=='+' || str[i]=='-' || str[i]=='/' || str[i]=='*' || str[i]=='%' || str[i]=='#') && ctr==0){
+             ctr++;
+             c=str[i];
+         }
+         else{
+             str2[y++]=str[i];
+         }
+     }
+     str2[y++]=c;
+     str2[y]=NULL;
+     printf("%s\n%s",str,str2);
+     return 0;
+ }
+ 
