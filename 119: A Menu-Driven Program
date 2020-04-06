@@ -1,0 +1,49 @@
+Write a menu-driven C program that allows a user to enter n numbers and then choose between finding the smallest, largest, sum or average. Use a switch statement to determine what action to take. Display an error message if an INVALID choice is entered.
+1. Small
+2. Large
+3. Sum
+4. Avg
+
+Sample Inputs	
+1
+56
+45
+90
+34
+56	
+
+Sample Outputs
+34
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     int a,arr[5],i,l,s,sum=0;
+     scanf("%d",&a);
+     for(i=0;i<5;i++){
+        scanf("%d",&arr[i]);    
+     }
+     l=s=arr[0];
+     for(i=0;i<5;i++){
+        if(s>arr[i])
+            s=arr[i];
+        
+        if(l<arr[i])
+            l=arr[i];
+            
+        sum=sum+arr[i];
+     }
+     switch(a){
+         case 1: printf("%d",s);break;
+         case 2: printf("%d",l);break;
+         case 3: printf("%d",sum);break;
+         case 4: printf("%d",sum/5);break;
+         default: printf("INVALID");
+         
+      }
+     return 0;
+ }
+ 
