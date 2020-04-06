@@ -1,0 +1,30 @@
+Develop a program to find the Maximum from a set of elements. The number of elements will be decided during the execution of the program.
+
+Sample Inputs	
+3 52 89 99	
+
+Sample Outputs
+The Largest of 3 numbers is 99
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     int n, l=0;
+     scanf("%d",&n);
+     int arr[n];
+     
+     for(int i=0;i<n;i++)
+     {
+         scanf("%d",&arr[i]);
+         if(l<arr[i]){
+             l=arr[i];
+         }
+     }
+
+     printf("The Largest of %d numbers is %d", n,l);
+     return 0;
+ }
+ 
