@@ -1,0 +1,45 @@
+Given coefficients of quadratic equation a, b and c, find the roots of quadratic equation using c language.
+
+Sample Inputs	
+1
+2
+3
+
+
+Sample Outputs
+-1.000000 2.000000
+-1.000000 2.000000
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imagPart;
+    scanf("%lf%lf%lf",&a,&b,&c);
+    
+    if(a==0&&b==0&&c==0){
+        printf("Invalid");
+        return 0;
+    }
+
+    discriminant = b * b - 4 * a * c;
+    
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("%.6lf\n%.6lf", root1, root2);
+    }
+
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        printf("%.6f\n%.6lf", root1,root1);
+    }
+
+    else {
+        realPart = -b / (2 * a);
+        imagPart = sqrt(-discriminant) / (2 * a);
+        printf("%.6lf+i%.6lf\n%.6f-i%.6f", realPart, imagPart, realPart, imagPart);
+    }
+
+    return 0;
+} 
+ 
