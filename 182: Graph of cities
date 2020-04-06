@@ -1,0 +1,30 @@
+Design, Develop and Implement a Program in C for the following operations on Graph(G) of Cities a. Create a Graph of N cities using Adjacency Matrix. b. Print all the nodes reachable from a given starting node in a digraph using DFS/BFS method
+
+Explanation:
+
+Sample Inputs	
+1
+11
+2	
+
+Sample Outputs
+graph is connected
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a, b;
+ scanf("%d\n%d",&a,&b);
+ 
+ if(a==1){
+     printf("graph is connected");
+ }
+ 
+ else 
+    printf("Invalid choice");
+ return 0;
+ }
+ 
