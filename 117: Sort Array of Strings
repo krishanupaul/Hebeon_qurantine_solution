@@ -1,0 +1,30 @@
+Develop a program to Sort Array of Strings.
+
+Sample Inputs	
+cba	
+
+Sample Outputs
+abc
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     char str[20];
+     char temp;
+     scanf("%s", str);
+     for(int i=0;str[i]!=0;i++){
+         for(int j=0;str[j]!=NULL;j++){
+             if(str[i]<str[j]){
+                 temp=str[i];
+                 str[i]=str[j];
+                 str[j]=temp;
+             }
+         }
+     }
+     printf("%s", str);
+     return 0;
+ }
+ 
