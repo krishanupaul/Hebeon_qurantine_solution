@@ -1,0 +1,28 @@
+Given space separated integers n and r, wirte a program to compute nCr.
+
+nCr = n! / ( r! (n-r)! )
+
+Sample Inputs	
+9 4	
+
+Sample Outputs
+126
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ int fact(int n){
+     if(n==0||n==1){
+         return 1;
+     }
+     else
+        return n*fact(n-1);
+ }
+ int main()
+ {
+ int a,b;
+ scanf("%d %d", &a,&b);
+ printf("%d", fact(a)/(fact(b)*fact(a-b)));
+ return 0;
+ }
+ 
