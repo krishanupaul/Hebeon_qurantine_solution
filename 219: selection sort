@@ -1,0 +1,44 @@
+This C Program implements selection sort method using functions. Selection sort is among the simplest of sorting techniques. It works as follows: first find the smallest in the array and exchange it with the element in the first position, then find the second smallest element and exchange it with the element in the second position, and continue in this way until the entire array is sorted.
+
+Example:
+
+Sample Inputs	
+5
+45
+54
+65
+15
+234	
+
+Sample Outputs
+15 45 54 65 234
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     int n, temp,i,j;
+     scanf("%d",&n);
+     int arr[n];
+     
+     for(i=0;i<n;i++){
+         scanf("%d",&arr[i]);
+     }
+     for(i=0;i<n-1;i++){
+         for(j=i+1;j<n;j++){
+             if(arr[i]>arr[j]){
+                 temp=arr[j];
+                 arr[j]=arr[i];
+                 arr[i]=temp;
+             }
+         }
+     }
+     
+     for(i=0;i<n;i++){
+         printf("%d ",arr[i]);
+     }
+     return 0;
+ }
+ 
