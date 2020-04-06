@@ -1,0 +1,35 @@
+Given values of a, b and c, write a C program to find the roots of a quadratic equation.
+
+Note: if the root are imaginary print "roots are imaginary"
+
+Sample Inputs	
+1 6 9	
+
+Sample Outputs
+-3.0
+-3.0
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imagPart;
+    scanf("%lf%lf%lf",&a,&b,&c);
+
+    discriminant = b * b - 4 * a * c;
+
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("%.1lf\n%.1lf", root1, root2);
+    }
+
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        printf("%.1f\n%.1lf", root1,root1);
+    }
+
+    else 
+        printf("roots are imaginary\n");
+
+    return 0;
+}
