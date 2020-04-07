@@ -1,0 +1,52 @@
+Write a C program to count the number of times a character occurs in a text file. The file name and the character are supplied as command-line arguments.
+
+Example:
+
+Sample Inputs	
+demo.txt
+ali786
+demo.txt	
+
+Sample Outputs
+File created successfully
+Data written successfully: ali786
+6
+1
+1
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ int main()
+ {
+    FILE *file,*fp;
+    char path[100],fName[20],ch;
+    int characters=0,words=0, lines=0;
+    
+    gets(fName);
+    fp=fopen(fName,"w+");
+    printf("File created successfully.\nData written successfully: ");
+    while((ch=getchar())!='\n'){
+        putc(ch,fp);
+        putc(ch,stdout);
+    }
+    fclose(fp);
+    printf("\n");
+    
+    scanf("%s",path);
+    file=fopen(path,"r");
+    
+    while((ch=getc(file))!=EOF){
+        characters++;
+        if(ch=='\n' || ch=='\0')lines++;
+        if(ch==' '||ch=='\t'||ch=='\n'||ch=='\0')words++;
+    }
+    if(characters>0){
+        words++;
+        lines++;
+    }
+    printf("%d\n%d\n%d\n",characters,words,lines);
+    fclose(file);
+     return 0;
+ }
+ 
