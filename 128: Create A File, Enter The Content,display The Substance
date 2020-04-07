@@ -1,0 +1,40 @@
+Write a C program to create a file, Enter the content, display the contents of a file to standard output device.
+
+Sample Inputs	
+file1.txt
+Welcome Student
+file1.txt	
+
+Sample Outputs
+File created successfully.
+Data written successfully.
+Contents of file is : Welcome Student
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+     FILE *fp;
+     char name[20],ch;
+     
+     scanf("%s",name);
+     
+     fp=fopen(name,"w+");
+     
+     while((ch=getchar())!='\n');
+     while((ch=getchar())!='\n'){
+         putc(ch,fp);
+     }
+     scanf("%s",name);
+     printf("File created successfully.\nData written successfully.\nContents of file is :");
+     rewind(fp);
+     while((ch=getc(fp))!=EOF){
+         if(ch=='\n') continue;
+         putc(ch,stdout);
+     }
+    fclose(fp);
+ return 0;
+ }
+ 
