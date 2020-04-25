@@ -1,0 +1,30 @@
+Description:
+
+Alice and Bob take turns playing a game, with Alice starting first.
+Initially, there is a number N on the chalkboard. On each player's turn, that player makes a move consisting of:
+Replacing the number N on the chalkboard with N - x.
+Also, if a player cannot make a move, they lose the game.
+Return True if and only if Alice wins the game, assuming both players play optimally.
+
+Sample Inputs	
+2	
+
+Sample Outputs
+true
+
+
+ //Please accept the inputs from the console and print the output
+ #include <stdio.h>
+ 
+ int main()
+ {
+ int a;
+ scanf("%d", &a);
+ if(a%2==0){
+     printf("true");
+ }
+ else
+    printf("false");
+ return 0;
+ }
+ 
