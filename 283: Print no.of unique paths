@@ -1,0 +1,43 @@
+Description:
+
+Write a program to print no.of unique paths to reach from 0,0 to M, N position of a matrix of given size M*N.
+
+Input:
+First and only line contains two space seperated integers M, N.
+
+Output:
+Your program should print no.of unique paths to reach from 0, 0 to M, N position of a matrix. of given size M*N.
+
+Constraints:
+1 <= M, N <= 20
+
+Sample Input	
+2 1
+
+Sample Output
+1
+
+#include <bits/stdc++.h> 
+  
+using namespace std; 
+ 
+int numberOfPaths(int m, int n) 
+{ 
+    int dp[n] = { 1 }; 
+    dp[0] = 1; 
+  
+    for (int i = 0; i < m; i++) { 
+        for (int j = 1; j < n; j++) { 
+            dp[j] += dp[j - 1]; 
+        } 
+    } 
+  
+    return dp[n - 1]; 
+} 
+  
+int main() 
+{ 
+    int m,n;
+    cin>>m>>n;
+    cout << numberOfPaths(m, n); 
+} 
