@@ -1,0 +1,38 @@
+Description:
+
+Given an integer N, Write a program to find factorial of a given number.
+
+Input:
+The first and only line contains an integer N.
+
+Output:
+Your program should print the factorial of a given number.
+
+Constraints:
+1 <= N <= 18
+
+0 <= Result <= 10^18
+
+Sample Input	
+9	
+
+Sample Output
+362880
+
+  #include<bits/stdc++.h>
+  using namespace std;
+  unsigned long long int arr[1000] = {0};
+  unsigned long long int fact(int n){
+      if(n>=0){
+          arr[0]=1;
+          for(int i=1;i<=n;i++){
+              arr[i]=i*arr[i-1];
+          }
+        return arr[n];
+      }
+  }
+  int main(){
+      int n;
+      cin>>n;
+      cout<<fact(n);
+  }
