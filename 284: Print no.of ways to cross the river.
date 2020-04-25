@@ -1,0 +1,55 @@
+Description:
+
+You are crossing a river without getting wet by jumping on the rocks in the path. You can skip atmost 1 rock while jumping.
+There are N rocks in the path. Write a program to print no.of ways to cross the river.
+
+Input:
+First and only line contains an integer N no.of rocks in the path.
+
+Output:
+Your program should print no.of unique ways to cross the river.
+
+Sample Input1:
+3
+
+Sample Output1:
+3
+
+Explanation:
+You can cross 3 ways when there are 3 rocks in the path
+1) First jump on to first rock and second jump on to second rock and thrid jump on to third rock and then other side of river (1, 2, 3).
+2) First jump on to first rock and second jump on to thrid rock(since you can skip 1 rock, skipping rock no.2) and then other side of river (1, 3).
+3) First jump on to second rock and second jump on to third rock and then other side of river (2, 3).
+
+Constraints:
+1 <= N <= 100
+
+Sample Input	
+5
+
+Sample Output
+8
+
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int arr[100]={-1};
+
+
+int fabi(int n){
+    arr[0]=0;
+    arr[1]=1;
+    for(int i=2;i<=n+1;i++){
+        arr[i]=arr[i-1]+arr[i-2];
+    }
+    return arr[n+1];
+}
+
+int main(){
+    int n;
+    cin>>n;
+    
+    cout<<fabi(n);
+}
